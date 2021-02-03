@@ -1,20 +1,26 @@
 \documentclass[11pt,legalpaper]{article}
+\usepackage{scrextend}
+\setlength{\parindent}{1cm}
+  \begin{document}
+    \title{RTC-Image-Server: Current Status}
+    \author{Hal DiMarchi}
+    \date{February 2021}
+    \maketitle
+    \newpage
+    \tableofcontents
+    \newpage
+    \section{Non-Server AWS Components}
+      \subsection{Web Adaptor}
+        \begin{addmargin}[1em]{2em}
+        \paragraph{~~Https \newline}
+          The Web Adaptor partially handles https protection for the server. While the security group cordons off http ports from the outside world the web adaptor routes https traffic to the server as http traffic. In this way it replaces an essential role of the ArcGIS Web Adaptor provided by ArcGIS Enterprise. However the proprietary web adaptor requires an additional license ASF does not have access to and one that would come at an additional unwanted cost.
+        \end{addmargin}
+      \subsection{Security Group}
+      \subsection{S3 Buckets}
+      \subsection{EC2 Instance}
+    \section{Server}
+      \subsection{Access and Credentials}
+      \subsection{Licensing}
+      \subsection{Site}
 
-\begin{document}
-
-  \title{RTC-Image-Server: Current Status}
-  \author{Hal DiMarchi}
-  \date{February 2021}
-  \maketitle
-  \newpage
-  \tableofcontents
-  \newpage
-  \section{Non-Server AWS Components}
-    \subsection{Web Adaptor}
-    \subsection{Security Group}
-    \subsection{S3 Buckets}
-    \subsection{EC2 Instance}
-  \section{Server}
-    \subsection{Access and Credentials}
-    \subsection{Licensing}
 \end{document}
