@@ -12,8 +12,8 @@
     \section{Non-Server AWS Components}
       \subsection{Web Adaptor}
         \begin{addmargin}[1em]{2em}
-        \paragraph{~~Https \newline}
-          The Web Adaptor partially handles https protection for the server. While the security group cordons off http ports from the outside world the web adaptor routes https traffic to the server as http traffic. In this way it replaces an essential role of the ArcGIS Web Adaptor provided by ArcGIS Enterprise. However the proprietary web adaptor requires an additional license ASF does not have access to and one that would come at an additional unwanted cost.
+        \paragraph{HTTPS \newline}
+          The Web Adaptor partially handles https protection for the server. While the security group cordons off http ports from the outside world the web adaptor routes https traffic to the server as http traffic. In this way it replaces an essential role of the ArcGIS Web Adaptor provided by ArcGIS Enterprise. However the proprietary web adaptor requires an additional license ASF does not have access to and one that would come at an additional unwanted cost. Currently connection to the server via the web adaptor will cause a browser to warn of an unsafe connection. This is because the certificate used for the web adaptor is meant for domains matching a `*.asf.alaska.edu' pattern, which the web adaptor currently does not.
         \end{addmargin}
       \subsection{Security Group}
       \subsection{S3 Buckets}
